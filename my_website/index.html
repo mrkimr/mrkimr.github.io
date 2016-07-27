@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link href="index.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+  </head>
+  <style>
+    body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+    button {font-family: "Montserrat", sans-serif}
+    .mySlides {display:none;}
+  </style>
+  <body style="background-color:rgb(255, 77, 77);">
+    <!-- NavBar -->
+    <a href="index.html">Home</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="aboutme.html">About Me</a>
+    
+    <div class="w3-content w3-section" style="max-width:1000px">
+      <img class="mySlides" src="images/homepic1.JPG" style="width:100%">
+      <img class="mySlides" src="images/homepic2.JPG" style="width:100%">
+      <img class="mySlides" src="images/homepic3.JPG" style="width:100%">
+    </div>
+    
+    <script>
+      var myIndex = 0;
+      carousel();
+      
+      function carousel() {
+          var i;
+          var x = document.getElementsByClassName("mySlides");
+          for (i = 0; i < x.length; i++) {
+             x[i].style.display = "none";
+          }
+          myIndex++;
+          if (myIndex > x.length) {myIndex = 1}
+          x[myIndex-1].style.display = "block";
+          setTimeout(carousel, 4000); // Change image every 2 seconds
+      }
+    </script>
+  </body>
+</html>
