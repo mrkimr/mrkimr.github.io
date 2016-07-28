@@ -7,21 +7,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
   </head>
-  <style>
-    body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
-    button {font-family: "Montserrat", sans-serif}
-    .mySlides {display:none;}
-  </style>
-  <body style="background-color:rgb(255, 77, 77);">
-    <!-- NavBar -->
-    <a href="index.html">Home</a>
-    <a href="portfolio.html">Portfolio</a>
-    <a href="aboutme.html">About Me</a>
+  <style></style>
+  <body bgcolor="#799899">
+    <table align="center" bgcolor="#51B29F">
+      <tr>
+        <td>
+          <div class="w3-content w3-section" style="max-width:100%">
+            <img class="mySlides" src="images/homepic1.JPG" style="width:100%">
+            <img class="mySlides" src="images/homepic2.JPG" style="width:100%">
+            <img class="mySlides" src="images/homepic3.JPG" style="width:100%">
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td align="center">
+          <a href="index.html" class="button">Home</a>
+          <a href="portfolio.html" class="button">Portfolio</a>
+          <a href="aboutme.html" class="button">About Me</a>
+        </td>
+      </tr>
+    </table>
     
-    <div class="w3-content w3-section" style="max-width:1000px">
-      <img class="mySlides" src="images/homepic1.JPG" style="width:100%">
-      <img class="mySlides" src="images/homepic2.JPG" style="width:100%">
-      <img class="mySlides" src="images/homepic3.JPG" style="width:100%">
+    <div align="center">
+    <h1 align="left">Welcome to Mr. Kim's Website</h1>
+    <p>Blah blah blah, more things to come!</p>
+    </div>
+    
+    
+    <div>
+      
     </div>
     
     <script>
@@ -37,7 +51,7 @@
           myIndex++;
           if (myIndex > x.length) {myIndex = 1}
           x[myIndex-1].style.display = "block";
-          setTimeout(carousel, 4000); // Change image every 2 seconds
+          setTimeout(carousel, 4000); // Change image every 4 seconds
       }
     </script>
   </body>

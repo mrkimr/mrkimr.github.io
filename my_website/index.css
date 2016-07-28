@@ -1,12 +1,38 @@
 h1 {
     color: white;
     text-align: center;
+    font-family: "Lato", sans-serif
 }
 h2 {
     color: white;
     text-align: center;
+    font-family: "Lato", sans-serif
 }
-
 .floated_img {
     float: left;
+}
+body,h3,h4,h5,h6 {
+    font-family: "Lato", sans-serif
+}
+.button {
+    font-family: "Montserrat", sans-serif;
+    background-color: #51B29F;
+    border: none;
+    color: white;
+    padding: 10px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.mySlides {
+    display:none
+}
+.w3-left, .w3-right, .w3-badge {
+    cursor:pointer
+}
+.w3-badge {
+    height:13px;width:13px;padding:0
 }
