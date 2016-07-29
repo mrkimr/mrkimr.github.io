@@ -13,22 +13,37 @@
     .w3-badge {height:13px;width:13px;padding:0}
   </style>
   <body style="background-color:rgb(0, 153, 204);">
-    <table>
-      <tr>
+    <table >
+      <tr bgcolor="#3F69B2">
         <td>
-            <div class="w3-content w3-display-container" style="max-width:100%;position:relative">
-              <img class="mySlides" src="images/chicago.JPG" style="width:100%">
-              <img class="mySlides" src="images/highschool.JPG" style="width:100%">
-              <img class="mySlides" src="images/college.JPG" style="width:100%">
-              <img class="mySlides" src="images/work.JPG" style="width:100%">
-              <div class="w3-center w3-section w3-large w3-text-white w3-display-bottomleft" style="width:100%">
-                <div class="w3-left w3-padding-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
-                <div class="w3-right w3-padding-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
-                <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
-                <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
-                <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
-              </div>
-            </div>
+          <div class="w3-content" style="max-width:100%">
+            <img class="mySlides" src="images/chicago.JPG" style="width:100%">
+            <img class="mySlides" src="images/highschool.JPG" style="width:100%">
+            <img class="mySlides" src="images/college.JPG" style="width:100%">
+            <img class="mySlides" src="images/work.JPG" style="width:100%">
+            <table>
+              <tr>
+                <td>
+                  <img class="demo w3-border w3-hover-shadow" src="images/chicago.JPG" style="width:100%" onclick="currentDiv(1)">
+                </td>
+                <td>
+                  <img class="demo w3-border w3-hover-shadow" src="images/highschool.JPG" style="width:100%" onclick="currentDiv(2)">
+                </td>
+                <td>
+                  <img class="demo w3-border w3-hover-shadow" src="images/college.JPG" style="width:100%" onclick="currentDiv(3)">
+                </td>
+                <td>
+                  <img class="demo w3-border w3-hover-shadow" src="images/work.JPG" style="width:100%" onclick="currentDiv(4)">
+                </td>
+              </tr>
+              <tr align="center">
+                <td>Birthplace</td>
+                <td>High School</td>
+                <td>College</td>
+                <td>Work</td>
+              </tr>
+            </table>
+          </div>
         </td>
       </tr>
       <tr>
@@ -40,32 +55,32 @@
       </tr>
     </table>
     <script>
-        var slideIndex = 1;
-        showDivs(slideIndex);
-        
-        function plusDivs(n) {
-          showDivs(slideIndex += n);
+      var slideIndex = 1;
+      showDivs(slideIndex);
+      
+      function plusDivs(n) {
+        showDivs(slideIndex += n);
+      }
+      
+      function currentDiv(n) {
+        showDivs(slideIndex = n);
+      }
+      
+      function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("demo");
+        if (n > x.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = x.length}
+        for (i = 0; i < x.length; i++) {
+           x[i].style.display = "none";
         }
-        
-        function currentDiv(n) {
-          showDivs(slideIndex = n);
+        for (i = 0; i < dots.length; i++) {
+           dots[i].className = dots[i].className.replace(" w3-border-red", "");
         }
-        
-        function showDivs(n) {
-          var i;
-          var x = document.getElementsByClassName("mySlides");
-          var dots = document.getElementsByClassName("demo");
-          if (n > x.length) {slideIndex = 1}
-          if (n < 1) {slideIndex = x.length}
-          for (i = 0; i < x.length; i++) {
-             x[i].style.display = "none";
-          }
-          for (i = 0; i < dots.length; i++) {
-             dots[i].className = dots[i].className.replace(" w3-white", "");
-          }
-          x[slideIndex-1].style.display = "block";
-          dots[slideIndex-1].className += " w3-white";
-        }
+        x[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " w3-border-red";
+      }
     </script>
   </body>
 </html>
